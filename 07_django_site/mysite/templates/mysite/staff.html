@@ -1,0 +1,16 @@
+{% include 'mysite/navigation.html' %}
+<head>
+    <title>Менеджмент на моей образовательной программе</title>
+</head>
+<body>
+    <h1>Менеджмент</h1>
+    <ul>
+        {% for member in staff %}
+            <li>
+                <img src="{{ member.photo.url }}" alt="Фото">
+                <p>ФИО: {{ member.full_name }}</p>
+                <p>Электронка: {{ member.email }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>

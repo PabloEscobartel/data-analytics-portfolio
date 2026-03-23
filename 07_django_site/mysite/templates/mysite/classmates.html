@@ -1,0 +1,19 @@
+{% include 'mysite/navigation.html' %}
+<html>
+<head>
+    <title>Мои сокурсники</title>
+</head>
+<body>
+    <h1>Сокурсники</h1>
+    <ul>
+        {% for classmate in classmates %}
+            <li>
+                <img src="{{ classmate.photo.url }}" alt="Фото">
+                <p>ФИО: {{ classmate.full_name }}</p>
+                <p>Электронка: {{ classmate.email }}</p>
+                <p>Телефон: {{ classmate.phone }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

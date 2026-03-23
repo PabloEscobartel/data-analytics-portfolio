@@ -1,0 +1,12 @@
+{% include 'mysite/navigation.html' %}
+<head>
+    <title>Я и мое обучение в Вышке</title>
+</head>
+<body>
+    <h1>Я</h1>
+    <img src="{{ profile.photo.url }}" alt="Фото">
+    <p>ФИО: {{ profile.full_name }}</p>
+    <p>Электронка: {{ profile.email }}</p>
+    <p>Телефон: {{ profile.phone }}</p>
+    <p>Резюме: {{ profile.resume }}</p>
+</body>

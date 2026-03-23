@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Я и мое обучение в Вышке</title>
+  <link href="{% static 'mysite/css/styles.css' %}" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="{% url 'index' %}">Я</a></li>
+      <li><a href="{% url 'education_program' %}">Описание моей образовательной программы</a></li>
+      <li><a href="{% url 'staff' %}">Менеджмент на моей образовательной программе</a></li>
+      <li><a href="{% url 'classmates' %}">Мои сокурсники</a></li>
+      {% for page in pages %}
+        {% if page.nav_display %}
+          <li><a href="{% url 'page' page.id %}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</body>
+</html>

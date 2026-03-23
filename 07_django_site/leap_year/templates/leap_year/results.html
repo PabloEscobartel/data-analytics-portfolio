@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Результат анализа</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Поле</th>
+                    <th>Значение</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ID</td>
+                    <td>{{ entry.id }}</td>
+                </tr>
+                <tr>
+                    <td>Год</td>
+                    <td>{{ entry.year }}</td>
+                </tr>
+                <tr>
+                    <td>Високосный?</td>
+                    <td>{{ entry.is_leap }}</td>
+                </tr>
+                <tr>
+                    <td>Век</td>
+                    <td>{{ entry.century }}</td>
+                </tr>
+                <tr>
+                    <td>Эра</td>
+                    <td>{{ entry.era }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="{% url 'index' %}" class="btn btn-secondary">Вернуться к вводу</a>
+        <a href="{% url 'all_data' %}" class="btn btn-secondary">Увидеть все данные</a>
+    </div>
+</body>
+</html>

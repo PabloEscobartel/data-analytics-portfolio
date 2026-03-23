@@ -1,0 +1,24 @@
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Убираем отступ справа у последнего элемента */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px; /* Увеличиваем размер шрифта */
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}

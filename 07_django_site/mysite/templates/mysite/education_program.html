@@ -1,0 +1,12 @@
+{% include 'mysite/navigation.html' %}
+<head>
+    <title>Описание моей образовательной программы</title>
+</head>
+<body>
+    <h1>{{ program.name }}</h1>
+    <a href="{{ program.link }}">Program Link</a>
+    <p>Что я буду изучать: {{ program.what_you_will_study }}</p>
+    <p>Чему научусь: {{ program.what_you_will_learn }}</p>
+    <p>Преимущества программы: {{ program.program_benefits }}</p>
+    <p>Перспективы после обучения: {{ program.future_prospects }}</p>
+</body>

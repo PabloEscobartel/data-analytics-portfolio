@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Все данные</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Все введённые данные</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Год</th>
+                    <th>Високосный?</th>
+                    <th>Век</th>
+                    <th>Эра</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in all_entries %}
+                <tr>
+                    <td>{{ entry.id }}</td>
+                    <td>{{ entry.year }}</td>
+                    <td>{{ entry.is_leap }}</td>
+                    <td>{{ entry.century }}</td>
+                    <td>{{ entry.era }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h2>Статистика для поля "год"</h2>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th>Count</th>
+                    <td>{{ statistics.count }}</td>
+                </tr>
+                <tr>
+                    <th>Average</th>
+                    <td>{{ statistics.avg }}</td>
+                </tr>
+                <tr>
+                    <th>Minimum</th>
+                    <td>{{ statistics.min }}</td>
+                </tr>
+                <tr>
+                    <th>Maximum</th>
+                    <td>{{ statistics.max }}</td>
+                </tr>
+                <tr>
+                    <th>Standard Deviation</th>
+                    <td>{{ statistics.stddev }}</td>
+                </tr>
+                <tr>
+                    <th>Sum</th>
+                    <td>{{ statistics.sum }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="{% url 'indexleap' %}" class="btn btn-secondary">Вернуться ко вводу</a>
+    </div>
+</body>
+</html>

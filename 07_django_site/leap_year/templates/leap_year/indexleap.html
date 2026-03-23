@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Високосные года</title>
+</head>
+<body>
+    <h1>Введите год</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Проверить</button>
+    </form>
+    <a href="{% url 'all_data' %}">Увидеть все введённые данные</a>
+</body>
+</html>
