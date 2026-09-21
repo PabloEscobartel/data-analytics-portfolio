@@ -1,0 +1,59 @@
+# Local environments, caches and editor state
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.Rhistory
+.RData
+*.log
+# Credentials and Telegram sessions
+.env
+.env.*
+!.env.example
+*.session
+*.session-*
+*cookie*.txt
+*cookie*.json
+rusbonds_auth.json
+credentials.json
+# Raw data, intermediate corpora and generated tables
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.sqlite3-*
+*.csv
+*.tsv
+*.parquet
+*.jsonl
+*.xlsx
+*.xls
+# Trained models and checkpoints (including ancillary tokenizer files)
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.pickle
+*.joblib
+*.onnx
+*.h5
+checkpoint-*/
+model_dapt*/
+bond_classifier_models*/
+# Regenerable analysis outputs
+final_results*/
+regression_dataset*/
+prediction_results*/
+gjrm_biprobit*/
+distribution_plots*.pdf
+# Local delivery documents and archives
+*.docx
+*.pptx
+*.zip
+*.tar
+*.gz

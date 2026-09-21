@@ -1,0 +1,6 @@
+{
+  "bearer_token": "paste-token-here",
+  "cookies": {
+    "auth.strategy": "local"
+  }
+}
