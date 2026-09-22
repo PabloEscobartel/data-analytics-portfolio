@@ -61,7 +61,7 @@ Retrieval-Augmented Generation в no-code оркестраторе n8n: загр
 | Категория | Технологии |
 |-----------|-----------|
 | Языки | Python, R, SQL |
-| ML/DS | scikit-learn, TensorFlow/Keras, NLTK, statsmodels |
+| ML/DS | scikit-learn, TensorFlow/Keras, PyTorch, NLTK, statsmodels |
 | Веб / Боты | Django, FastAPI, aiogram, asyncio |
 | Парсинг | Selenium, Playwright, BeautifulSoup, requests |
 | Инструменты | Docker, n8n, Git, Jupyter, Google Colab |
